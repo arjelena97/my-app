@@ -26,7 +26,7 @@ const ButtonWrapper = styled(Box)`
 function App() {
 
 const handleOnClick = () => {
-  window.open('/FirstPage');
+  window.open('/FirstPage', '_self');
 }
 
   return (
