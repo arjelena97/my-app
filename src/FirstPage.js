@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Box, TextField, Button } from '@mui/material';
-import SecondPage from './SecondPage';
 
 const StyledFormBox = styled(Box)`
   background-color: #caeffc;
@@ -24,10 +23,9 @@ function FirstPage() {
   const [inputLastNameData, setInputLastNameData] = useState('');  
   const [inputEmailData, setInputEmailData] = useState('');  
   const [inputAboutData, setInputAboutData] = useState('');  
-    
+  
   const handleButtonClick = () => {
-    window.open('/SecondPage', '_self')
-    return <SecondPage data={'data'} /> //fiksati
+    window.open('/SecondPage', '_self');
   }
   
   return (
