@@ -1,8 +1,10 @@
+import { Box } from "@mui/material";
+
 function SecondPage() {
     
-    return (
-        console.log('druga stranica')
-    )
-  }
+  return (
+    <Box></Box>
+  )
+}
   
-  export default SecondPage;
+export default SecondPage;
