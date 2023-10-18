@@ -1,9 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
-import { Box, TextField, Button } from '@mui/material'
+import { Box, TextField, Button } from '@mui/material';
 
 const StyledFormBox = styled(Box)`
-  background-color: #f0e4f7;
+  background-color: #caeffc;
   display: grid;
   justify-content: center;
   width: 50%;
@@ -13,31 +14,58 @@ const StyledFormBox = styled(Box)`
 `;
 
 const Heading = styled.h1`
-// dopuni
+  color: #1976d2;  
 `;
+
+const handleButtonClick = () => {
+    window.open('/SecondPage', '_self');
+  }
 
 function FirstPage() {
 
+  const [inputNameData, setInputNameData] = useState('');
+  const [inputLastNameData, setInputLastNameData] = useState('');  
+  const [inputEmailData, setInputEmailData] = useState('');  
+  const [inputAboutData, setInputAboutData] = useState('');  
+    
   return (
     <StyledFormBox>
         <Heading>Let's introduce!</Heading>
         <TextField
           label="Name"
           variant="outlined"
-          name="username"
+          name="name"
           margin='normal'
+          value={inputNameData}
+          onChange={(e) => setInputNameData(e.target?.value)}
         />
-        {/* dodaj akcije */}
         <TextField
           label="Last Name"
           variant="outlined"
           name="last name"
           margin='normal'
+          value={inputLastNameData}
+          onChange={(e) => setInputLastNameData(e.target?.value)}
         />
-        <Button variant="contained" color="primary">
+        <TextField
+          label="Email"
+          variant="outlined"
+          name="email"
+          margin='normal'
+          value={inputEmailData}
+          onChange={(e) => setInputEmailData(e.target?.value)}
+        />
+        <TextField
+          label="Something about yourself"
+          variant="outlined"
+          name="about"
+          margin='normal'
+          value={inputAboutData}
+          onChange={(e) => setInputAboutData(e.target?.value)}
+        />
+        <Button variant="contained" color="primary" onClick={handleButtonClick}>
           Submit
         </Button>
-        {/* povezi sa sledecom stranom */}
     </StyledFormBox>
   );
 }

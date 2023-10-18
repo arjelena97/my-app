@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import FirstPage from './FirstPage';
+import SecondPage from './SecondPage';
 
 ReactDOM.render(
-  <Router>
+<Router>
   <Switch>
+    <Route path="/SecondPage" component={SecondPage} />
     <Route path="/FirstPage" component={FirstPage} />
     <Route path="/" component={App} />
   </Switch>
