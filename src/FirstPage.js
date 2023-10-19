@@ -2,19 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Box, TextField, Button } from '@mui/material';
+import { palette } from './utils/palette';
 
 const StyledFormBox = styled(Box)`
-  background-color: #caeffc;
   display: grid;
   justify-content: center;
   width: 50%;
   height: 100%;
   margin-left: 25%;
   padding-bottom: 20px;
-`;
-
-const Heading = styled.h1`
-  color: #1976d2;  
 `;
 
 function FirstPage() {
@@ -29,8 +25,8 @@ function FirstPage() {
   }
   
   return (
-    <StyledFormBox>
-        <Heading>Let's introduce!</Heading>
+    <StyledFormBox backgroundColor={ palette.lightBlue }>
+        <h1>Let's introduce!</h1>
         <TextField
           label="Name"
           variant="outlined"
