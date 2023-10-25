@@ -1,5 +1,11 @@
 Mini React.js project that contains 3 pages (content is irrelevant):
 
+to compile app: npm start
+/localhost:3000
+
+to commpile storybook: npm run storybook
+/localhost:6006
+
 1. Welcome page
    
 ![README1](https://github.com/arjelena97/my-app/assets/67201346/770ccfeb-98e5-4c2b-a04a-c37373e852c3)
